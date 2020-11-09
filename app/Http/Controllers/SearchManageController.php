@@ -110,7 +110,7 @@ class SearchManageController extends Controller
     		$product_content .= ' (Kode Barang : ' . $product->kode_barang . ', Jenis Barang : ' . $product->jenis_barang . ', Nama Barang : ' . $product->nama_barang . ', Berat Barang : ' . $product->berat_barang . ', Merek : '. $product->merek . ', Stok : ' . $product->stok . ', Harga : Rp. ' . number_format($product->harga,2,',','.') . ', Keterangan : ' . $product->keterangan . ')';
     	}
     	// New Product
-    	$new_prpduct_content = 'Daftar Barang | Barang Baru : Kode Barang, Nama Barang, Jenis Barang, Berat Barang, Merek Barang, Stok Barang, Harga Barang || Import(Upload Excel) -> Langkah - Langkah Import : 1. Siapkan data dengan format Excel (.xls atau .xlsx), 2. Jika sudah sesuai pilih file, 3. Klik simpan, maka data otomatis tersimpan';
+    	$new_prpduct_content = 'Daftar Barang | Barang Baru : Kode Barang, Nama Barang, Jenis Barang, Berat Barang, Merek Barang, Stok Barang, Harga Jual || Import(Upload Excel) -> Langkah - Langkah Import : 1. Siapkan data dengan format Excel (.xls atau .xlsx), 2. Jika sudah sesuai pilih file, 3. Klik simpan, maka data otomatis tersimpan';
     	// Supply
     	$supply_content = 'Riwayat Pasok => ';
     	$supply_statistics_content = 'Riwayat Pasok | Statistik Pasok : ';

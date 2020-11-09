@@ -130,7 +130,7 @@ $(function() {
       nama_barang: "Nama barang tidak boleh kosong",
       jenis_barang: "Silakan pilih jenis barang",
       stok: "Stok barang tidak boleh kosong",
-      harga: "Harga barang tidak boleh kosong"
+      harga: "Harga Jual tidak boleh kosong"
     },
     errorPlacement: function(error, element) {
         var name = element.attr("name");
@@ -155,7 +155,7 @@ var validator = $("form[name='update_form']").validate({
     nama_barang: "Nama barang tidak boleh kosong",
     jenis_barang: "Silakan pilih jenis barang",
     stok: "Stok barang tidak boleh kosong",
-    harga: "Harga barang tidak boleh kosong"
+    harga: "Harga Jual tidak boleh kosong"
   },
   errorPlacement: function(error, element) {
       var name = element.attr("name");

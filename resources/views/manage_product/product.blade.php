@@ -23,7 +23,7 @@
             @if($supply_system->status == true)
             <a href="#" class="dropdown-item filter-btn" data-filter="stok">Stok Barang</a>
             @endif
-            <a href="#" class="dropdown-item filter-btn" data-filter="harga">Harga Barang</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="harga">Harga Jual</a>
 	        </div>
 	      </div>
         <div class="dropdown dropdown-search">
@@ -121,7 +121,7 @@
                 <div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 error-notice" id="stok_error"></div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Harga Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Harga Jual</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <div class="input-group">
                       <div class="input-group-prepend">

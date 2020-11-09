@@ -7,9 +7,15 @@
   <div class="col-12">
     <div class="page-header d-flex justify-content-between align-items-center">
       <h4 class="page-title">Dashboard</h4>
+      @php
+  $access = \App\Acces::where('user', auth()->user()->id)
+  ->first();
+  @endphp
+  @if($access->kelola_akun == 1)
       <button class="setting-btn" data-toggle="modal" data-target="#pengaturanTokoModal">
         Pengaturan Toko
       </button>
+      @endif
     </div>
   </div>
 </div>
@@ -202,18 +208,32 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: '',
             data: [
+              @php
+              $pemasukan = 0;
+              @endphp
             @if(count($incomes) != 0)
             @foreach($incomes as $income)
             @php
-            $total = \App\Transaction::whereDate('created_at', $income)
-            ->sum('total');
+            $transactions = \App\Transaction::select('kode_transaksi')
+			      ->whereDate('transactions.created_at', $income)
+            ->distinct()
+            ->latest()
+            ->get();
             @endphp
-            "{{ $total }}",
+            @foreach($transactions as $transaction)
+            @php
+            $transaksi = \App\Transaction::where('kode_transaksi', $transaction->kode_transaksi)
+						->select('transactions.*')
+						->first();
+            $pemasukan += $transaksi->total;
+            @endphp
+            @endforeach
+            "{{ $pemasukan }}",
             @endforeach
             @endif
             ],
-            backgroundColor: 'RGB(44, 77, 240)',
-            borderColor: 'RGB(44, 77, 240)',
+            backgroundColor: 'RGB(255, 117, 23)',
+            borderColor: 'RGB(255, 117, 23)',
             borderWidth: 0
         }]
     },

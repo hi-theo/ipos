@@ -2,7 +2,7 @@ html{
 	scroll-behavior: smooth;
 }
 .bg-blue{
-	background-color: #020aab;
+	background-color:#ff7517;
 }
 
 .bg-blue-2{
@@ -45,8 +45,8 @@ html{
 
 .icon-round{
 	border-radius: 10px;
-	border: 1px solid #4e55c5;
-	background: #2944b5;
+	border: 1px solid#393e46;
+	background: #393e46;
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 25px;
@@ -59,8 +59,8 @@ html{
 
 .icon-round-2{
 	border-radius: 10px;
-	border: 1px solid #d9d9d9;
-	background: #f2f2f2;
+	border: 1px solid #ff7517;
+	background: #ff7517;
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 25px;
@@ -79,8 +79,8 @@ html{
 .btn-view-all{
 	cursor:pointer;
     display: inline-block;
-	background-color: #f9f9f9;
-    color: #d5d5d5;
+	background-color: #ff7517;
+    color: #fff;
 	border-color: #d5d5d5;
     border-radius: 50%;
     font-size: 20px;
@@ -92,8 +92,8 @@ html{
 }
 
 .btn-view-transaction{
-	background-color: #f1f3fa !important;
-	color: #717a90 !important;
+	background-color:#ff7517 !important;
+	color: #fff !important;
 	font-size: 12px;
 }
 
@@ -103,9 +103,9 @@ html{
 }
 
 .icon-transaksi{
-	background-color: #f5f4f8;
+	background-color:#ff7517;
 	border-radius: 10px;
-	color: #717a90;
+	color: #fff;
 	font-size: 20px;
 	text-align: center;
 	line-height: 30px;
@@ -117,24 +117,24 @@ html{
 
 .kode_transaksi{
 	margin: 0;
-	color: #636a7b;
+	color:#ff7517;
 }
 
 .des-transaksi{
 	margin: 0;
-	color: #a9aebc;
+	color: #fff;
 	font-size: 12px;
 }
 
 .w-transaksi{
 	margin: 0;
-	color: #a9aebc;
+	color: #fff;
 	font-size: 10px;
 }
 
 .btn-filter-chart, .btn-filter-chart:hover{
-	border: 1px solid #ced4da;
-	color: #435df2;
+	border: 1px solid#ff7517;
+	color: #fff;
 	font-weight: bold;
 }
 
@@ -143,8 +143,8 @@ html{
 }
 
 .setting-btn{
-	background-color: #e5e9f9;
-	color: #415af1;
+	background-color:#ff7517;
+	color: #fff;
 	border: 0;
 	border-radius: 5px;
 	font-size: 14px;
