@@ -268,13 +268,27 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: '',
             data: [
+              @php
+              $pemasukan = 0;
+              @endphp
             @if(count($incomes) != 0)
             @foreach($incomes as $income)
             @php
-            $total = \App\Transaction::whereDate('created_at', $income)
-            ->sum('total');
+            $transactions = \App\Transaction::select('kode_transaksi')
+			      ->whereDate('transactions.created_at', $income)
+            ->distinct()
+            ->latest()
+            ->get();
             @endphp
-            "{{ $total }}",
+            @foreach($transactions as $transaction)
+            @php
+            $transaksi = \App\Transaction::where('kode_transaksi', $transaction->kode_transaksi)
+						->select('transactions.*')
+						->first();
+            $pemasukan += $transaksi->total;
+            @endphp
+            @endforeach
+            "{{ $pemasukan }}",
             @endforeach
             @endif
             ],

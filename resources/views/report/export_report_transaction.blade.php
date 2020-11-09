@@ -161,10 +161,15 @@
 			@foreach($dates as $date)
 			<li class="text-10 txt-light mt-2">{{ date('d M, Y', strtotime($date)) }}</li>
 			@php
-			$transactions = \App\Transaction::whereDate('transactions.created_at', $date)
-			->select('transactions.*')
+			$transactions = \App\Transaction::select('kode_transaksi')
+			->whereDate('transactions.created_at', $date)
+			->distinct()
 			->latest()
 			->get();
+			// $transactions = \App\Transaction::whereDate('transactions.created_at', $date)
+			// ->select('transactions.*')
+			// ->latest()
+			// ->get();
 			@endphp
 			<table class="w-100 mb-4">
 				<thead>
@@ -175,24 +180,35 @@
 				<tbody>
 					@foreach($transactions as $transaction)
 					<tr>
+						@php
+						$transaksi = \App\Transaction::where('kode_transaksi', $transaction->kode_transaksi)
+						->select('transactions.*')
+						->first();
+						$products = \App\Transaction::where('kode_transaksi', $transaction->kode_transaksi)
+						->select('transactions.*')
+						->get();
+						$tgl_transaksi = \App\Transaction::where('kode_transaksi', '=' , $transaction->kode_transaksi)
+						->select('created_at')
+						->first();
+						@endphp
 						<td>
 							<span class="text-12 txt-dark2 d-block">{{ $transaction->kode_transaksi }}</span>
 							<span class="text-10 txt-light d-block">Waktu : {{ date('H:i', strtotime($transaction->created_at)) }}</span>
 						</td>
 						<td>
 							<span class="text-10 txt-light d-block">Total</span>
-							<span class="txt-green text-12 d-block">Rp. {{ number_format($transaction->total,2,',','.') }}</span>
+							<span class="txt-green text-12 d-block">Rp. {{ number_format($transaksi->total,2,',','.') }}</span>
 						</td>
 						@php
-						$pemasukan += $transaction->total;
+						$pemasukan += $transaksi->total;
 						@endphp
 						<td>
 							<span class="text-10 txt-light d-block">Bayar</span>
-							<span class="txt-dark2 text-12 d-block">Rp. {{ number_format($transaction->bayar,2,',','.') }}</span>
+							<span class="txt-dark2 text-12 d-block">Rp. {{ number_format($transaksi->bayar,2,',','.') }}</span>
 						</td>
 						<td>
 							<span class="text-10 txt-light d-block">Kembali</span>
-							<span class="txt-dark text-12 d-block">Rp. {{ number_format($transaction->kembali,2,',','.') }}</span>
+							<span class="txt-dark text-12 d-block">Rp. {{ number_format($transaksi->kembali,2,',','.') }}</span>
 						</td>
 						<td>
 							<span class="txt-dark2 text-12 d-block">{{ $transaction->kasir }}</span>

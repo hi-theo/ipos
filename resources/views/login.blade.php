@@ -26,11 +26,12 @@
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
+                <h1  style="text-align:center"><b>Admin</b>Toko</h1>
                 @if($users != 0)
                 <form action="{{ url('/verify_login') }}" method="post" name="login_form">
                   @csrf
                   <div class="form-group">
-                    <label class="label">Username</label>
+                    <label class="label"><br><br>Username</label>
                     <div class="input-group">
                       <input type="text" class="form-control" name="username" placeholder="Username">
                       <div class="input-group-append">
@@ -96,7 +97,6 @@
                 </form>
                 @endif
               </div>
-              <p class="mt-3 footer-text text-center">copyright © 2018 Bootstrapdash. All rights reserved.</p>
             </div>
           </div>
         </div>

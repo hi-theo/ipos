@@ -1,3 +1,5 @@
 .login-page{
-	background: #1c45ef;
+	background-image: url("/images/bg/bg.jpg");
+	background-position: center;
+	/* background: yellow; */
 }

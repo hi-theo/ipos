@@ -2181,7 +2181,7 @@ textarea.form-control {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
+  background-color: #ff7517;
   border: 1px solid transparent;
   padding: 0.4rem 1rem;
   font-size: 0.875rem;
@@ -2689,7 +2689,7 @@ input[type="button"].btn-block {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #ff7517;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
@@ -8555,7 +8555,7 @@ input:focus {
 body {
   font-size: 1rem;
   font-family: "roboto", sans-serif;
-  color: #212529; }
+  color: #fff; }
 
 .h1,
 .h2,
@@ -8575,7 +8575,9 @@ h6 {
   font-stretch: normal;
   line-height: normal; }
 
-p,
+p{
+  color:#fff;
+},
 a:not([href]):not([tabindex]) {
   color: #212529;
   font-size: 0.875rem; }
@@ -8685,7 +8687,7 @@ address p {
     color: #252C46; }
 
 .page-title {
-  color: #212529;
+  color: #FFFFFF;
   margin: 0.38rem 0 0.75rem; }
 
 .card-title {
@@ -10204,11 +10206,11 @@ pre {
     .dropdown-menu {
       position: unset; } }
   .dropdown-menu .dropdown-header {
-    background: #fff;
+    background: #ff7517;
     color: #212529; }
     .dropdown-menu .dropdown-header * {
-      background: inherit;
-      color: inherit; }
+      background: #ff7517;
+      color: #fff; }
   .dropdown-menu a:not([href]):not([tabindex]):hover.dropdown-item,
   .dropdown-menu a:not([href]):not([tabindex]):focus.dropdown-item {
     background: #fff;
@@ -10221,8 +10223,8 @@ pre {
     .dropdown-menu a:not([href]):not([tabindex]):focus.dropdown-item:active {
       background: initial; }
   .dropdown-menu .dropdown-item {
-    background: #fff;
-    color: #212529; }
+    background: #ff7517;
+    color: #fff; }
     .dropdown-menu .dropdown-item:hover {
       background: #fbfbfb;
       color: #212529; }

@@ -154,13 +154,13 @@
 					  	@endif
 					  	<div class="col-lg-6 col-md-6 col-sm-12">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Harga Barang <span class="text-danger">*</span></label>
+					  			<label class="col-12 font-weight-bold col-form-label">Harga Jual <span class="text-danger">*</span></label>
 							  	<div class="col-12">
 							  		<div class="input-group">
 							  			<div class="input-group-prepend">
 							  				<span class="input-group-text">Rp. </span>
 							  			</div>
-							  			<input type="text" class="form-control number-input" name="harga" placeholder="Masukkan Harga Barang">
+							  			<input type="text" class="form-control number-input" name="harga" placeholder="Masukkan Harga Jual">
 							  		</div>
 							  	</div>
 								<div class="col-12 error-notice" id="harga_error"></div>

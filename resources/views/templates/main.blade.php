@@ -27,9 +27,9 @@
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
           <a class="navbar-brand brand-logo" href="{{ url('/dashboard') }}">
-            <img src="{{ asset('icons/logo.png') }}" alt="logo" /> </a>
+            <img src="{{ asset('icons/logo2.png') }}" alt="logo" /> </a>
           <a class="navbar-brand brand-logo-mini" href="{{ url('/dashboard') }}">
-            <img src="{{ asset('icons/logo-mini.png') }}" alt="logo" /> </a>
+            <img src="{{ asset('icons/logo-mini.png') }}" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
           <form class="search-form d-none d-md-block" action="#">
@@ -284,9 +284,7 @@
           </div>
           <footer class="footer" id="footer-content">
             <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019 <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i>
-              </span>
+              <h1 class="text-muted d-block text-center text-sm-left d-sm-inline-block">Tolong kami dibayar</h1>
             </div>
           </footer>
         </div>

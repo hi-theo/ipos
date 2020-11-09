@@ -49837,8 +49837,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Project\Web\ipos-system-master\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Project\Web\ipos-system-master\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Project\phpdesktop-chrome-57.0-rc-php-7.1.3\www\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Project\phpdesktop-chrome-57.0-rc-php-7.1.3\www\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
