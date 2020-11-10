@@ -198,7 +198,7 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [
+      labels: [
         @if(count($incomes) != 0)
         @foreach($incomes as $income)
         "{{ date('d M, Y', strtotime($income)) }}",
@@ -208,27 +208,15 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: '',
             data: [
-              @php
-              $pemasukan = 0;
-              @endphp
             @if(count($incomes) != 0)
             @foreach($incomes as $income)
             @php
-            $transactions = \App\Transaction::select('kode_transaksi')
-			      ->whereDate('transactions.created_at', $income)
-            ->distinct()
-            ->latest()
-            ->get();
+            $total = \App\Transaction::whereDate('created_at', $income)
+            ->groupBy('kode_transaksi')
+            ->get()
+            ->sum('total');
             @endphp
-            @foreach($transactions as $transaction)
-            @php
-            $transaksi = \App\Transaction::where('kode_transaksi', $transaction->kode_transaksi)
-						->select('transactions.*')
-						->first();
-            $pemasukan += $transaksi->total;
-            @endphp
-            @endforeach
-            "{{ $pemasukan }}",
+            "{{ $total }}",
             @endforeach
             @endif
             ],

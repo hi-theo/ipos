@@ -204,7 +204,7 @@
                   <td>{{ $product->berat_barang }}</td>
                   <td>{{ $product->merek }}</td>
                   @if($supply_system->status == true)
-                  <td><span class="ammount-box bg-secondary"><i class="mdi mdi-cube-outline"></i></span>{{ $product->stok }}</td>
+                  <td><span class="ammount-box bg-secondary"><i class="mdi mdi-cube-outline" style="color: #3e4939"></i></span>{{ $product->stok }}</td>
                   @endif
                   <td><span class="ammount-box bg-green"><i class="mdi mdi-coin"></i></span>Rp. {{ number_format($product->harga,2,',','.') }}</td>
                   @if($supply_system->status == true)

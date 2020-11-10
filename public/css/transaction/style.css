@@ -18,7 +18,7 @@
 
 .icon-holder{
 	border-radius: 5px;
-    border: 1px solid #4e55c5;
+    border: 1px solid #3e3939;
     width: 40px;
     height: 40px;
     display: -webkit-box;
@@ -30,13 +30,13 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: #2944b5;
+    background: #3e3939;
     color: #fff;
     font-size: 20px;
 }
 
 .bg-dark-blue .card{
-	background: #030aac;
+	background: #ff7517;
 }
 
 .btn-search{
@@ -46,13 +46,13 @@
 }
 
 .btn-scan{
-	background-color: #264bf1;
+	background-color: #3e3939;
 	color: #fff;
 	font-size: 18px !important;
 }
 
 .btn-search:hover{
-	color: #2196f3;
+	color: #ff7517;
 }
 
 .btn-scan:hover{
@@ -126,7 +126,6 @@
 }
 
 .payment-1{
-    background-color: #efefef;
     border-radius: 5px;
     padding: 10px;
 }

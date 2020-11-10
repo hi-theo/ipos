@@ -4,8 +4,8 @@ function changeDataPelanggan(chart, label_array, data_array){
       datasets: [{
           label: '',
           data: data_array,
-          backgroundColor: 'RGB(44, 77, 240)',
-          borderColor: 'RGB(44, 77, 240)',
+          backgroundColor: 'RGB(255, 117, 23)',
+          borderColor: 'RGB(255, 117, 23)',
           borderWidth: 0
       }]
   }
@@ -48,8 +48,8 @@ function changeDataPemasukan(chart, label_array, data_array){
       datasets: [{
           label: '',
           data: data_array,
-          backgroundColor: 'RGB(44, 77, 240)',
-          borderColor: 'RGB(44, 77, 240)',
+          backgroundColor: 'RGB(255, 117, 23)',
+          borderColor: 'RGB(255, 117, 23)',
           borderWidth: 0
       }]
   }

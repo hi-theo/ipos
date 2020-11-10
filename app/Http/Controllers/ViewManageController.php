@@ -88,7 +88,7 @@ class ViewManageController extends Controller
             $incomes = array_reverse($incomes_data);
             $total = array();
             foreach ($incomes as $no => $income) {
-                array_push($total, Transaction::whereDate('created_at', $income)->groupBy('created_at')->sum('total'));
+                array_push($total, Transaction::whereDate('created_at', $income)->groupBy('kode_transaksi')->get()->sum('total'));
             }
 
             return response()->json([

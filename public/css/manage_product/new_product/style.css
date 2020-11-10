@@ -13,7 +13,7 @@
 }
 
 .bg-dark-blue .card{
-	background: #030aac;
+	background: #ff7517;
 }
 
 .icon-holder{
@@ -61,21 +61,21 @@
 }
 
 .btn-scan{
-	background-color: #2449f0;
+	background-color: #ff7517;
 	color: #fff;
 }
 
 .btn-scan:hover{
-	background-color: #2449f0;
+	background-color: #ff7517;
 	color: #fff;
 }
 
 .btn-scan:hover{
-	border: 0px solid #2449f0;
+	border: 0px solid #ff7517;
 }
 
 .btn-scan:not( :hover ){
-	border: 0px solid #2449f0;
+	border: 0px solid #ff7517;
 }
 
 .btn-scan i{

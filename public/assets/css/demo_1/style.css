@@ -639,7 +639,7 @@
   border-radius: 0px; 
   background: #3e3939;}
   .card .card-title {
-    color: #212529; }
+    color: #fff; }
   .card .card-header {
     background: #fff; }
 
@@ -805,7 +805,7 @@
   color: #212529; }
 
 .average-price-card .card {
-  background: #030aac; }
+  background: #ff7517; }
 
 .average-price-card h3 {
   margin-bottom: 0; }
